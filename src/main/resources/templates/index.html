@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+        Hi people
+    </title>
+</head>
+<body>
+sdfsdfs
+<p th:text="'Hello mister , ' + ${name} + '!'" />
+
+<li th:each="person : ${persons}"><p th:text="'person -  , ' + ${person.getName()} + '!'" /></li>
+</body>
+</html>

@@ -1,21 +1,34 @@
 package com.projectenergo.web;
 
+import com.projectenergo.service.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by aleksandr on 11.02.2016.
  */
-@RestController
+@Controller
 public class HomeController {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView index(ModelAndView mv) {
-        mv.addObject("name", "Big buddy");
-        mv.setViewName("index");
-        return mv;
+
+    private PersonService personService;
+
+    @Autowired
+    public void setProductService(PersonService productService) {
+        this.personService = productService;
+    }
+
+
+    @RequestMapping(value = "/", method=RequestMethod.GET, produces="text/plain")
+    public String index(Model model) {
+
+        model.addAttribute("name", "Big buddy");
+        model.addAttribute("persons",personService.listAllPerson());
+        return "index";
     }
 
 

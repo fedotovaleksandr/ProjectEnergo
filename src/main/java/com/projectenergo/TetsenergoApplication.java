@@ -10,9 +10,8 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
+
+@SpringBootApplication
 public class TetsenergoApplication {
 
 	private static TemplateEngine templateEngine;
