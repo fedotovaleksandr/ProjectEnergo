@@ -10,18 +10,18 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "document", indexes = {
-        @Index(columnList = "UniqueNumber", name = "UniqueNumber_index")})
+        @Index(columnList = "uniqueNumber", name = "UniqueNumber_index")})
 public class DocumentEntity implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
 
     @Column()
-    private String Title;
+    private String title;
 
     @NotEmpty
     @Column(unique = true)
-    private String UniqueNumber;
+    private String uniqueNumber;
 
     @ManyToOne()
     @JoinColumn(name = "person_id")
@@ -36,18 +36,26 @@ public class DocumentEntity implements Serializable {
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public String getUniqueNumber() {
-        return UniqueNumber;
+        return uniqueNumber;
     }
 
     public void setUniqueNumber(String uniqueNumber) {
-        UniqueNumber = uniqueNumber;
+        this.uniqueNumber = uniqueNumber;
+    }
+
+    public PersonEntity getPerson() {
+        return person;
+    }
+
+    public void setPerson(PersonEntity person) {
+        this.person = person;
     }
 }

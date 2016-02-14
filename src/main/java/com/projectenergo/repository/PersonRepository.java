@@ -2,6 +2,7 @@ package com.projectenergo.repository;
 
 import com.projectenergo.entity.DocumentEntity;
 import com.projectenergo.entity.PersonEntity;
+import com.projectenergo.form.PersonSearchForm;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.*;
 
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Repository
 public interface PersonRepository extends CrudRepository<PersonEntity, Integer> {
+
 
 
 }

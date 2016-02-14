@@ -2,12 +2,10 @@ package com.projectenergo.entity;
 
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
-import org.springframework.boot.orm.jpa.EntityScan;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 import java.util.Vector;
 
 /**
@@ -21,17 +19,17 @@ public class PersonEntity implements Serializable {
     private Long id;
 
     @Column()
-    private String Name;
+    private String name;
 
     @Column()
-    private String Surname;
+    private String surname;
 
     @Column()
-    private String Email;
+    private String email;
 
     @OneToMany(cascade = CascadeType.ALL, targetEntity = DocumentEntity.class)
     @LazyCollection(LazyCollectionOption.TRUE)
-    private List<DocumentEntity> series = new Vector<DocumentEntity>();
+    private List<DocumentEntity> documents = new Vector<DocumentEntity>();
 
     public Long getId() {
         return id;
@@ -42,34 +40,34 @@ public class PersonEntity implements Serializable {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.surname = surname;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
-    public List<DocumentEntity> getSeries() {
-        return series;
+    public List<DocumentEntity> getDocuments() {
+        return documents;
     }
 
-    public void setSeries(List<DocumentEntity> series) {
-        this.series = series;
+    public void setDocuments(List<DocumentEntity> documents) {
+        this.documents = documents;
     }
 }
