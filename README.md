@@ -34,8 +34,10 @@ https://github.com/fedotovaleksandr/ProjectEnergo
 $ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
 ```
 
+
 ___
 - Additional parameters generation PersonEntity:
+
 
 ```Sh
 -Dgenerate.names = Alex,jack ...
