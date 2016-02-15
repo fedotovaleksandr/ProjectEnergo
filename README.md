@@ -31,9 +31,11 @@ https://github.com/fedotovaleksandr/ProjectEnergo
 - Execute fat .jar:
 
 ```Sh
-- $ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
+$ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
 ```
+
 - Additional parameters generation PersonEntity:
+
 ```Sh
 -Dgenerate.names = Alex,jack ...
 ```
