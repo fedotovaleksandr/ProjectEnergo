@@ -32,9 +32,9 @@ https://github.com/fedotovaleksandr/ProjectEnergo
 
 ```Sh
 $ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
-````
+```
 
-
+___
 - Additional parameters generation PersonEntity:
 
 ```Sh
