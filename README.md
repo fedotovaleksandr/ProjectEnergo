@@ -28,7 +28,7 @@ Paths:
 
 ### Deploy
 
-You need Gulp installed globally:
+Execute fat .jar:
 
 ```Sh
 $ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
