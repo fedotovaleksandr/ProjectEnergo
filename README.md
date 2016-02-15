@@ -1,12 +1,12 @@
 # Test Project Energo
 https://github.com/fedotovaleksandr/ProjectEnergo
-##### Requirements
+### Requirements
 
 - Implement a search for people by name or number of the document (use only one input for entering the search string).
 - Use maven
 - Refrain from using xml-settings
 
-##### Response
+### Response
 
 
 > To solve these problems, I chose the Spring Framework and associated libraries.
@@ -18,7 +18,7 @@ https://github.com/fedotovaleksandr/ProjectEnergo
 
 
 
-Paths:
+### Paths:
 
 * [Http://95.213.204.131/] - Home Page
 * [Http://95.213.204.131/about] - Load Content from Github Page.
@@ -28,16 +28,22 @@ Paths:
 
 ### Deploy
 
-Execute fat .jar:
+- Execute fat .jar:
 
 ```Sh
-$ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
+- $ Java -Dspring.profiles.active = production -jar project-1.0.0.BUILD-SNAPSHOT.jar
 ```
-Additional parameters generation PersonEntity:
+- Additional parameters generation PersonEntity:
 ```Sh
 -Dgenerate.names = Alex,jack ...
+```
+```Sh
 -Dgenerate.surnames = Lebron,bryant ...
+```
+```Sh
 -Dgenerate.emails = Test@mail.ru,ops@ops.com ...
+```
+```Sh
 -Dgenerate.document.titles = DocForYou,SomeDoc ...
 ```
 
