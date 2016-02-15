@@ -21,7 +21,7 @@ public class HomeController {
     private PersonService personService;
 
     @Autowired
-    public void setProductService(PersonService productService) {
+    public void setPersonService(PersonService productService) {
         this.personService = productService;
     }
 

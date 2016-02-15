@@ -21,7 +21,7 @@ public class PersonService {
     private PersonRepository personRepository;
     private DocumentRepository documentRepository;
     @Autowired
-    public void setProductRepository(PersonRepository personRepository) {
+    public void setPersonRepository(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
     @Autowired
@@ -102,8 +102,12 @@ public class PersonService {
         List<PersonEntity> persons;
         if (Pattern.matches("^.*[0-9]+.*$", search)) {
             persons=searchPersonByDocs(form);
+
         }else{
             persons=searchPerson(form);
+            if (persons.size() < 1) {
+                persons=searchPersonByDocs(form);
+            }
         }
 
         return  persons;
